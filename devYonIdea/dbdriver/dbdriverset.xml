@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseDriverSet>
+
+	<database>
+		<databaseType>SQLSERVER2016</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>sqlserver_2016/sqljdbc4.jar</driverLib>
+			<driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClass>
+			<driverUrl>
+				jdbc:sqlserver://127.0.0.1:1433;database=nc60;sendStringParametersAsUnicode=true;responseBuffering=adaptive
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.SQLServerProvider</providerClass>
+		</driver>
+
+	</database>
+
+	<database>
+		<databaseType>SQLSERVER2017</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>sqlserver_2017/sqljdbc4.jar</driverLib>
+			<driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClass>
+			<driverUrl>
+				jdbc:sqlserver://127.0.0.1:1433;database=nc60;sendStringParametersAsUnicode=true;responseBuffering=adaptive
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.SQLServerProvider</providerClass>
+		</driver>
+
+	</database>
+
+	<database>
+		<databaseType>SQLSERVER2019</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>sqlserver_2019/sqljdbc4.jar</driverLib>
+			<driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClass>
+			<driverUrl>
+				jdbc:sqlserver://127.0.0.1:1433;database=nc60;sendStringParametersAsUnicode=true;responseBuffering=adaptive
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.SQLServerProvider</providerClass>
+		</driver>
+
+	</database>
+
+
+	<database>
+		<databaseType>ORACLE11G</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>oracle_11g/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/nc6x</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-bea</driverType>
+			<driverLib>oracle_11g/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/nc6x</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-RAC</driverType>
+			<driverLib>oracle_11g/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT =
+				1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.192.140.228)(PORT = 1521))(LOAD_BALANCE =
+				yes)(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = nc6x))
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+	</database>
+
+	<database>
+		<databaseType>ORACLE12C</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>oracle_12c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/ncc</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-bea</driverType>
+			<driverLib>oracle_12c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/ncc</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-RAC</driverType>
+			<driverLib>oracle_12c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT =
+				1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.192.140.228)(PORT = 1521))(LOAD_BALANCE =
+				yes)(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = nc6x))
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+	</database>
+
+
+	<database>
+		<databaseType>ORACLE19C</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>oracle_19c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/ncc</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-bea</driverType>
+			<driverLib>oracle_19c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@127.0.0.1:1521/ncc</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+		<driver>
+			<driverType>JDBC-RAC</driverType>
+			<driverLib>oracle_19c/ojdbc6.jar</driverLib>
+			<driverClass>oracle.jdbc.OracleDriver</driverClass>
+			<driverUrl>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT =
+				1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.192.140.228)(PORT = 1521))(LOAD_BALANCE =
+				yes)(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = nc6x))
+			</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+	</database>
+
+	<!-- 华为GaussDB -->
+	<database>
+		<databaseType>OPENPG</databaseType>
+		<databaseSubType>GAUSSDB</databaseSubType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>GAUSSDB/gsjdbc4.jar</driverLib>
+			<driverClass>org.postgresql.Driver</driverClass>
+			<driverUrl>jdbc:postgresql://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OpenPGAdapter</providerClass>
+		</driver>
+	</database>
+
+	<!-- 腾讯云TDSQL-PG -->
+	<database>
+		<databaseType>MYSQL</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>mysql/mysql-connector-java-8.0.27.jar</driverLib>
+			<driverClass>com.mysql.cj.jdbc.Driver</driverClass>
+			<driverUrl>jdbc:mysql://127.0.0.1:3306/test</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OracleProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>TDSQL</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>tdsql/tdsql-pg-connector-java8-1.0.4.jar</driverLib>
+			<driverClass>com.tencentcloud.tdsql.pg.jdbc.Driver</driverClass>
+			<driverUrl>jdbc:tdsql-pg://127.0.0.1:5432/nc60?oracle_compile=true</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.TDSQLProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>DB210</databaseType>
+		<driver>
+			<driverType>JCC</driverType>
+			<driverLib>db2_10/db2jcc.jar,db2_10/db2jcc_license_cu.jar</driverLib>
+			<driverClass>com.ibm.db2.jcc.DB2Driver</driverClass>
+			<driverUrl>jdbc:db2://127.0.0.1:50000/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.DB2JCCProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>DM</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>DM/DmJdbcDriver18.jar</driverLib>
+			<driverClass>dm.jdbc.driver.DmDriver</driverClass>
+			<driverUrl>jdbc:dm://127.0.0.1:12345/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.DMProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>IMPALA</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>impala_42/ImpalaJDBC42.jar</driverLib>
+			<driverClass>com.cloudera.impala.jdbc.Driver</driverClass>
+			<driverUrl>jdbc:impala://172.20.58.173:21050/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.ImpalaProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>POSTGRESQL</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>postgresql/postgresql20190219.jar</driverLib>
+			<driverClass>org.postgresql.Driver</driverClass>
+			<driverUrl>jdbc:postgresql://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.PostgreSQLProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>HIGHGO</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>highgo/hgjdbc-6.2.4.jar</driverLib>
+			<driverClass>com.highgo.jdbc.Driver</driverClass>
+			<driverUrl>jdbc:highgo://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.HighgoProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>KINGBASE</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>kingbase/kingbase8-8.6.0.jar</driverLib>
+			<driverClass>com.kingbase8.Driver</driverClass>
+			<driverUrl>jdbc:kingbase8://127.0.0.1:54321/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.KingBaseProvider</providerClass>
+		</driver>
+	</database>
+
+	<!-- 神通数据库 -->
+	<database>
+		<databaseType>OSCAR</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>oscar/oscarJDBC.jar</driverLib>
+			<driverClass>com.oscar.Driver</driverClass>
+			<driverUrl>jdbc:oscar://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OscarProvider</providerClass>
+		</driver>
+	</database>
+
+	<!-- 阿里云PolarDB-PG -->
+	<database>
+		<databaseType>POLARDB</databaseType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>polardb/polardb-jdbc18.jar</driverLib>
+			<driverClass>com.aliyun.polardb.Driver</driverClass>
+			<driverUrl>jdbc:polardb://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.PolardbProvider</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>OPENPG</databaseType>
+		<databaseSubType>OPENPG</databaseSubType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>openpg/postgresql-42.6.0.jar</driverLib>
+			<driverClass>org.postgresql.Driver</driverClass>
+			<driverUrl>jdbc:postgresql://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OpenPGAdapter</providerClass>
+		</driver>
+	</database>
+	<database>
+		<databaseType>OPENPG</databaseType>
+		<databaseSubType>YMatrix</databaseSubType>
+		<driver>
+			<driverType>JDBC</driverType>
+			<driverLib>YMatrix/postgresql-42.6.1.jar</driverLib>
+			<driverClass>org.postgresql.Driver</driverClass>
+			<driverUrl>jdbc:postgresql://127.0.0.1:5432/nc60</driverUrl>
+			<maxCon>50</maxCon>
+			<minCon>10</minCon>
+			<providerClass>nc.bs.framework.was.admin.jdbc.OpenPGAdapter</providerClass>
+		</driver>
+	</database>
+	
+</databaseDriverSet>

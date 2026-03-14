@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category id="pers.bc.chat.link.commands.category" name="Sample Category"/>
+      <command  categoryId="pers.bc.chat.link.commands.category" name="Sample Command" id="pers.bc.chat.link.commands.sampleCommand">
+         <commandParameter  id="pers.bc.chat.link.commandParameter1"  name="name" optional="false"/>
+      </command>
+   </extension>
+   <extension point="org.eclipse.ui.handlers">
+      <handler  commandId="pers.bc.chat.link.commands.sampleCommand" class="pers.bc.chat.menu.eclipse.AiNavbarHandler"/>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+            <menu id="pers.bc.chat.link.menus.sampleMenu" label="人工智能-AI(◕‿◕)"> 
+         
+            <command icon="/icons/ai.png" label="AI工具导航" id="https://aidh.net" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  icon="/icons/zzpqy.png" label="智谱(AI工具集)" id="https://ai-bot.cn/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <separator name="LiBencheng-id4" visible="true"/>
+         
+            <command label="ChatGPT" id="https://openai.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command icon="/icons/zkimi.png" label="KiMi" id="https://kimi.moonshot.cn/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  label="Meet Claude" id="https://www.anthropic.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <separator name="LiBencheng-id3" visible="true"/>
+            
+  			<command  icon="/icons/zbaiduai.png" label="文心" id="https://chat.baidu.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  icon="/icons/zyuanbao.png" label="元宝" id="https://yuanbao.tencent.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command icon="/icons/zdeepseek.png" label="DeepSeek" id="https://chat.deepseek.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command icon="/icons/qianwen.png" label="千问" id="https://www.qianwen.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  icon="/icons/zdoubao.png" label="豆包" id="https://www.doubao.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+  			<separator name="LiBencheng-id2" visible="true"/>
+  			
+  			<command  label="秘塔 AI" id="https://metaso.cn/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+  			<command  icon="/icons/znami.png" label="纳米 AI" id="https://www.n.cn/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+  			<command  label="AI万花筒" id="http://www.aiwht.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <separator name="LiBencheng-id0" visible="true"/>
+            
+            <command  label="Trae AI" id="https://www.trae.ai/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  label="Cursor‌ AI" id="https://www.cursor.com/cn" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  label="copilot AI" id="https://copilot.microsoft.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <separator name="LiBencheng-id" visible="true"/>
+            
+            <command  label="Boardmix AI(绘画)" id="https://boardmix.cn/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+            <command  label="gogemini" id="https://gogemini.com/" commandId="pers.bc.chat.link.commands.sampleCommand"/> 
+       
+ <separator name="LiBencheng-id11" visible="true"/>
+            
+            <command  label="关于我^_^" icon="icons/aixin.png" id="HelpAction" commandId="pers.bc.chat.link.commands.sampleCommand"/>            
+
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

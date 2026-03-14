@@ -1,0 +1,39 @@
+卷 程序 的文件夹 PATH 列表
+卷序列号为 1D81-2556
+D:.
+    com.yonyou.common.tablestruct_2021.11.0.jar
+    com.yonyou.ria.core.scriptexport_2021.11.0.jar
+    com.yonyou.ria.g2_2021.11.0.jar
+    com.yonyou.studio.common.config_2021.11.0.jar
+    com.yonyou.studio.common.connection.impl.ierp_2021.11.0.jar
+    com.yonyou.studio.common.connection.spi_2021.11.0.jar
+    com.yonyou.studio.common.core.spi_2021.11.0.jar
+    com.yonyou.studio.common.core.ui_2021.11.0.jar
+    com.yonyou.studio.common.product_2021.11.0.jar
+    com.yonyou.studio.common.report.ui_2021.11.0.jar
+    com.yonyou.studio.common.velocity_2021.11.0.jar
+    com.yonyou.studio.mdp.bean_2021.11.0.jar
+    com.yonyou.studio.mdp.database_2021.11.0.jar
+    com.yonyou.studio.mdp.service.code.jet_2021.11.0.jar
+    com.yonyou.studio.mdp.service.code_2021.11.0.jar
+    com.yonyou.studio.mdp.service.pdmgen_2021.11.0.jar
+    com.yonyou.studio.mdp.service.publish_2021.11.0.jar
+    com.yonyou.studio.mdp.service.query_2021.11.0.jar
+    com.yonyou.studio.mdp.service.reference_2021.11.0.jar
+    com.yonyou.studio.mdp.service.sqlgen_2021.11.0.jar
+    com.yonyou.studio.mdp.services_2021.11.0.jar
+    com.yonyou.studio.mdp.service_2021.11.0.jar
+    com.yonyou.studio.mdp_2021.11.0.jar
+    com.yonyou.studio.udt.core_2021.11.0.jar
+    com.yonyou.studio.udt.launching_2021.11.0.jar
+    com.yonyou.studio.udt.ui_2021.11.0.jar
+    com.yonyou.studio.udt.upm_2021.11.0.jar
+    com.yonyou.stuido.mdp.validate_2021.11.0.jar
+    com.yonyou.uapstudio.patch_2021.11.0.jar
+    nc.uap.studio.pub_2021.11.0.jar
+    org.apache.velocity_2021.11.0.jar
+    文件树.bat
+    文件树.txt
+    
+没有子文件夹 
+

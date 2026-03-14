@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="propChangeListeners" name="%extension-point.name.propchange" schema="schema/propChangeListeners.exsd"/>
+   <extension-point id="extClassLoaders" name="%extension-point.name" schema="schema/extClassLoaders.exsd"/>
+   <extension point="org.eclipse.ui.preferencePages">
+ 
+  <page
+        class="nc.uap.plugin.studio.ui.preference.DevelopmentPreferencePage"
+        id="nc.uap.studio.common.preferencePages.main" name="%page.name.main">
+  </page>
+      
+  <page category="nc.uap.studio.common.preferencePages.main"
+        class="nc.uap.plugin.studio.ui.preference.ClientPreferencePage"
+        id="com.yonyou.studio.common.core.ui.pageClientInfo"
+        name="%page.name.0">
+  </page>
+  
+  </extension>
+	<extension point="org.eclipse.core.variables.valueVariables">
+		<variable description="%variable.description" initialValue="testbill" name="FIELD_EX_MODULES" />
+		<variable description="%variable.description.0" initialValue="127.0.0.1" name="FIELD_CLINET_IP"/>
+		<variable description="%variable.description.1" initialValue="8080" name="FIELD_CLINET_PORT"/>
+	</extension>
+	
+   <extension point="com.yonyou.studio.common.core.ui.propChangeListeners">
+      <listener  class="nc.uap.plugin.studio.listener.impl.VariableListener"/>
+      <listener  class="nc.uap.plugin.studio.classloader.pub.listener.ClassLoaderEnvPropChangeListener"/>
+  </extension>
+  
+   <extension  point="org.eclipse.ui.startup">
+      <startup  class="com.yonyou.common.core.ui.startup.EnvValidator"/>
+   </extension>
+   
+   <extension  point="org.eclipse.ui.actionSets">
+      <actionSet id="com.yonyou.common.core.ui.uaptoolset" label="%actionSet.label.0"  visible="true">
+         <menu id="com.yonyou.common.core.ui.uaptoolmenu"  label="%menu.label.0">
+            <groupMarker name="devtools"/>
+            <separator name="devtestSep"/>
+            <groupMarker name="devtools"/>
+            <separator name="testbuildSep"/>
+            <groupMarker name="buildtools"/>
+         </menu>
+      </actionSet>
+   </extension>
+   
+   <extension point="org.eclipse.ui.commands">
+      <category id="OpenApiAutoToken.commands.category" name="Sample Category"/>
+      <command  categoryId="OpenApiAutoToken.commands.category" name="Sample Command" id="OpenApiAutoToken.commands.sampleCommand"/>
+    </extension>
+    
+   <extension  point="org.eclipse.ui.handlers">
+      <handler  class="nccloud.open.api.auto.token.handlers.OpenAPITestHandler"  commandId="OpenApiAutoToken.commands.sampleCommand"/>
+    </extension>
+    
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar  id="OpenApiAutoToken.toolbars.sampleToolbar">
+            <command
+                  id="OpenApiAutoToken.toolbars.sampleCommand"
+                  commandId="OpenApiAutoToken.commands.sampleCommand"
+                  icon="icons/yonyou2.png"
+                  tooltip="YonBip OpenAPI"/>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   
+  <extension  point="org.eclipse.ui.commands">
+         
+      <!--重置root密码-->   
+      <command defaultHandler="nc.uap.mde.tool.ChangePassword" id="nc.uap.mde.tool.ChangePassword" name="Change Password"/>
+      <!--清缓存-->   
+      <command  defaultHandler="nc.uap.mde.tool.CleanChacheHandler"  id="nc.uap.mde.tool.CleanChacheHandler" name="Clean Chache"/>
+      <!--打开NCHome-->   
+      <command  defaultHandler="nc.uap.mde.tool.OpenHomeHandler" id="nc.uap.mde.tool.OpenHomeHandler"  name="打开NCHome"/> 
+      <!--打开sysconfig-->   
+      <command  defaultHandler="nc.uap.mde.tool.OpenncconfigHandler" id="nc.uap.mde.tool.OpenncconfigHandler"  name="打开sysconfig"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+          <toolbar  id="nc.uap.mde.tool.menus">
+            <command commandId="nc.uap.mde.tool.CleanChacheHandler"   icon="icons/UClient.png"   tooltip="清除NC缓存"  id="cn.yangtao.clearcache.toolbars.Command"/>
+            <command  commandId="nc.uap.mde.tool.OpenncconfigHandler" icon="icons/ncconfig.jpg" tooltip="打开NCconfig" id="cn.yangtao.openncconfig.toolbars.Command"/>
+            <command commandId="nc.uap.mde.tool.OpenHomeHandler" icon="icons/yonyou.png" tooltip="打开NChome" id="cn.yangtao.openhome.toolbars.Command"/>
+           <command  commandId="nc.uap.mde.tool.ChangePassword" icon="icons/password.gif" tooltip="重置root/super密码"  id="cn.yangtao.changepassword.Command"/>
+         </toolbar>
+      </menuContribution>
+      
+   </extension>
+      <extension  point="org.eclipse.ui.startup">
+      	<startup class="nc.uap.mde.tool.ConsoleMge"/>
+   </extension>
+
+</plugin>

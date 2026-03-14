@@ -1,0 +1,630 @@
+<idea-plugin>
+  <id>yonyou.dev.studio</id>
+  <name>YonBuilder Premium开发者工具</name>
+  <version>2025.111001</version>
+  <vendor email="" url="https://community.yonyou.com/">客开赋能部</vendor>
+
+  <description>
+    <![CDATA[
+      使用说明：详见文章【<a href="https://community.yonyou.com/article/detail/658" style="white-space: normal;">基于idea的YonBIP高级版开发插件使用说明</a>】
+
+      <h4>2025-11-10升级说明：<br/></h4>
+      <p>
+      提供本地与大模型集成的MCP服务功能1110
+      </p>
+      <p>
+      导出补丁的名称包含时分秒的时间戳
+      </p>
+      ----------------------------------------------------------------------------------
+      </p>
+      <h4>更早之前的升级说明：<br/></h4>
+      <p>
+      <br/>
+      </p>
+      <p>
+      优化多模块private的引用类检查校验问题
+      </p>
+      <p>
+      切换HOME后自动将home\ierp\bin\prop.xml中的IP切换为127.0.0.1
+      </p>
+      <p>
+      优化MCP服务停止失败的问题
+      </p>
+      <p>
+      修改多模块出补丁获取模块不对的问题:从选中的文件或目录先向下递归,找第一个META-INF下面的module.xml中的模块编码，没找到的话再向上递归，找到第一个module.xml中的模块编码，都没有找到使用模块的值。
+      </p>
+      <p>
+      增加MCP使用说明跳转功能
+      </p>
+      <p>
+      适配不同版本IDEA出补丁问题
+      </p>
+      <p>
+      多模块复制UPM,rest,鉴权文件等问题
+      </p>
+      <p>
+      优化导出补丁格式为: patch_补丁_日期_版本号_开发人员
+      </p>
+      <p>
+      10 加入温馨提示,⚠️ 注意：本工具专为开发阶段设计，严禁在生产或测试环境中设置 HOME 目录，否则可能导致严重后果。
+      </p>
+      <p>
+      空项目转为高级版项目时自动创建默认类
+      </p>
+      <p>
+      更新tablerule
+      </p>
+      <p>
+      修改数据源问题
+      </p>
+      <p>
+      适配2025版idea导出补丁功能
+      </p>
+      <p>
+      支持空项目转换高级版项目
+      </p>
+      <p>
+      修改2025版idea加密问题
+      </p>
+      <p>
+      修改部分已知问题
+      </p>
+      <p>
+      自动更新\hotwebs\nccloud\WEB-INF\config\miscellaneous.xml下的gzip,mark,aesKey,localStorage为false
+      </p>
+      <p>
+      修改ncchr挪包逻辑；
+      </p>
+      <p>
+      增加git日志中导出补丁目录；
+      </p>
+      <p>
+      界面功能优化；
+      </p>
+      <p>
+      查看本地数据源数据字典功能；
+      </p>
+      <p>
+      导出预制脚本时，allsql增加删除语句，删除语句通过item.xml中的条件进行删除，注意删除顺序问题；
+      </p>
+      <p>
+      增加抽取多语功能；
+      </p>
+      <p>
+      增加提交自动检测多语功能；
+      </p>
+      <p>
+      OpenAPI发送请求时会把之前的响应结果清掉；
+      </p>
+      <p>
+      增加标识，对导出的预制脚本进行部分优化；
+      </p>
+      <p>
+      对大批量导出预制脚本进行性能优化；
+      </p>
+      <p>
+      对加入到library中的jar包进行去重和版本识别；
+      </p>
+      <p>
+      增加根据前端请求url搜索Action类路径的功能；
+      </p>
+      <p>
+      数据库驱动增加：腾讯云数据库；
+      </p>
+      <p>
+      预制脚本转换成图表预览；
+      </p>
+      <p>
+      增加跟随home切换jdk(仅Windows系统生效)功能；
+      </p>
+      <p>
+      导出预制脚本功能对智能分析部分脚本特殊处理；
+      </p>
+      <p>
+      更新导出预制脚本的规则xml；
+      </p>
+      <p>
+      适配jdk17；
+      </p>
+      <p>
+      平台模块导出补丁适配；
+      </p>
+      <p>
+      导出预制脚本allsql改为可选项；
+      </p>
+      <p>
+      导出预制脚本如果数据中的blob或clob字段为空则不导出大字段文件；
+      </p>
+      <p>
+      更换检测更新逻辑，主要是更新插件仓库；
+      </p>
+      <p>
+      Home配置页面增加插件设置按钮，可配置：进度条隐藏、是否自动识别client导出位置、是否使用自定义.table等内容；
+      </p>
+      <p>
+      导出预制脚本时可选item项；
+      </p>
+      <p>
+      导补丁功能可在提交页面使用，选中要提交的文件右键即可；
+      </p>
+      <p>
+      client、public和private代码开发时的调用校验；
+      </p>
+      <p>
+      解决jps无法监控jvm的问题；
+      </p>
+      <p>
+      登陆友户通后，开发资源目录下的跳转页面后无需二次登陆；
+      </p>
+      <p>
+      开发资源目录下的数据字典动态获取；
+      </p>
+      <p>
+      导出预制脚本可选择数据源，并且可选择allsql是否导出多语字段；
+      </p>
+      <p>
+      中间件服务启动模块信息完善，右侧领域选择按钮变更为表格右键选择；
+      </p>
+      <p>
+      增加分层开发类库的加载；
+      </p>
+      <p>
+      增加插件更新通知功能；
+      </p>
+      <p>
+      增加旧Home数据源迁移功能；
+      </p>
+      <p>
+      增加多类型数据库驱动添加功能；
+      </p>
+      <p>
+      增加数据库连接自动识别功能；
+      </p>
+      <p>
+      增加界面右下角快速切换数据源功能；
+      </p>
+      <p>
+      增加复制模块中resources目录下文件到Home功能；
+      </p>
+      <p>
+      导出补丁优化，所选文件导出的所属模块可编辑
+      </p>
+      <p>
+      保证切换数据库类型后，所加载的数据库驱动类正确，无需手动挪包
+      </p>
+      <p>
+      兼容nc5.x数据库驱动位置读取变化
+      </p>
+      <p>
+      更新导出预制脚本配置信息
+      </p>
+      <p>
+      数据库测试连接功能改为根据当前输入值测试连接，而不是必须应用之后才能测试连接
+      </p>
+      <p>
+      解决导出resources下补丁，云管家无法识别的问题
+      </p>
+      <p>
+      增加导出补丁包loading效果
+      </p>
+      <p>
+      在home配置中增加打开home所在文件夹和运行sysconfig的功能
+      </p>
+      <p>
+      修改hotwebs下补丁文件挪包后位置
+      </p>
+      <p>
+      优化部分功能，保证双开或多开
+      </p>
+      <p>
+      增加代码检测功能
+      </p>
+      <p>
+      优化导出补丁包，导出内容不再局限于src目录下
+      </p>
+      <p>
+      优化OpenAPI连接测试的相关功能;
+      </p>
+      <p>
+      菜单栏中的工具增加【home配置】的入口，并添加快捷键Alt+H;
+      </p>
+      <p>
+      增加对最新版本home的开发支持;
+      </p>
+      <p>
+      更新插件名称，全面启用YonBuilder Premium和YonBIP高级版的名称
+      </p>
+      <p>
+      新增【转化成YonBIP高级版项目】功能
+      </p>
+      <p>
+      修正切换home后报错的问题
+      </p>
+      <p>
+      修改OpenAPI发送请求后的任务线程，保证可以在连接本地启动的服务时可以调试接口；
+      </p>
+      <p>
+      增加服务启动模块选择（位置在：服务启动配置界面）;
+      </p>
+      <p>
+      修改启动中间件服务的jvm参数（更新此版本的插件请删掉之前的服务重新通过项目右键创建服务）;
+      </p>
+      <p>
+      导出补丁区分hr和普通项目，区分home是v5/6.x和轻量端版本;
+      </p>
+      <p>
+      增加支持多模块补丁导出;
+      </p>
+      <p>
+      解决由File.separator()引起的兼容性问题;
+      </p>
+      <p>
+      解决生成client启动配置项默认ip为空问题;
+      </p>
+      <p>
+      修改文件访问路径分隔符，以保证兼容mac;
+      </p>
+      <p>
+      增加开发资源菜单项，位于菜单栏中。包含：开发文档、技术论坛、OpenAPI文档三个跳转菜单，帮助开发人员快速打开对应网站;
+      </p>
+      <p>
+      增加开发者登录选项，位于[菜单栏]->[开发资源]下。用于开发者登录后，获取开发社区广播发送的消息;
+      </p>
+      <p>
+      修改支持版本，目前该插件仅支持idea 2020.3及以上版本;
+      </p>
+      <p>
+      修改2021.1及以上版本加载类库报错问题;
+      </p>
+      <p>
+      <br/>
+      </p>
+      <p>
+      ----------------------------------------------------------------------------------
+      </p>
+      <h1>
+          功能说明：
+      </h1>
+      <h2>
+          Home配置：
+      </h2>
+      <p>
+          用于home配置，内容包含home地址、数据库连接信息、基准库。按钮在工具栏上右侧，构建项目图标旁边。此功能是该插件的核心，其他一切功能都需要用到其中的信息，请在使用前先配置好。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          YonBIP高级版项目工具：
+      </h2>
+      <p>
+          是一个功能组，位于选中项目后右键的菜单中。内容包含了导出补丁、创建YonBIP高级版项目、创建YonBIP高级版业务组件、复制鉴权和upm文件到Home、更新类路径、YonBIP高级版项目调试服务创建、导出预制脚本、转化成YonBIP高级版项目等功能。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          导出补丁：
+      </h2>
+      <p>
+          仅提供src目录下文件的补丁导出，选中的文件路径如果没有src则无此功能按钮。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          创建YonBIP高级版项目：
+      </h2>
+      <p>
+          有两个地方可以看到此按钮，分别是：File-&gt;New 之后的出现的菜单中；还有就是在YonBuilder Premium 项目工具功能组中。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          创建YonBIP高级版业务组件：
+      </h2>
+      <p>
+          仅在选中YonBIP高级版项目时会出现此按钮，用于新建YonBIP高级版业务组件，会自动添加对应目录和文件。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          复制鉴权和upm文件到Home：
+      </h2>
+      <p>
+          仅在选中YonBIP高级版项目时会出现此按钮，会将项目中的所有client下yyconfig文件夹下的配置文件复制到home中。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          更新类路径：
+      </h2>
+      <p>
+          仅在选中YonBIP高级版项目时会出现此按钮，如果未更改home地址，仅更新了home中的jar包（安装了新的安装盘），必须手动点击此按钮以更新项目引用的jar包。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          YonBIP高级版项目调试服务创建：
+      </h2>
+      <p>
+          仅在选中YonBIP高级版项目时会出现此按钮，用于创建中间价启动服务和重量端的client服务。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          导出预制脚本：
+      </h2>
+      <p>
+          仅在业务组件目录下存在script文件夹且选中其中的xml文件时会出现此按钮，根据xml配置内容<span style="color: rgb(255, 0, 0);">连接基准库</span>导出SQL脚本。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          转化成YonBIP高级版项目：
+      </h2>
+      <p>
+          导入的项目在成为模块后可以转化成YonBIP高级版项目，此按钮只有在非YonBIP高级版项目模块上才会存在。此功能会自动添加缺失的必须文件。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <h2>
+          OpenAPI Tool：
+      </h2>
+      <p>
+          此功能在右侧侧边栏，通过配置OpenAPI信息，方便快捷的测试对应接口。
+      </p>
+      <p>
+          <br/>
+      </p>
+      <p>
+          技术网站：<a href="https://community.yonyou.com/" style="white-space: normal;">https://community.yonyou.com/</a>
+      </p>
+    ]]>
+  </description>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="222.3345.118"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <!-- 扩展 -->
+  <extensions defaultExtensionNs="com.intellij">
+    <vcsCheckinHandlerFactory implementation="com.yonyou.lang.utils.GitCheckUtils"/>
+    <!-- 侧边栏 -->
+    <toolWindow id="OpenApi Tool" icon="/icons/nccicon.svg" secondary="false" anchor="right"
+      factoryClass="com.yonyou.openapi.OpenApiToolWinFactory"/>
+<!--    <toolWindow id="xiaoyouRobot" icon="/icons/robot.svg" secondary="false" anchor="right"-->
+<!--                factoryClass="com.yonyou.robot.RobotToolWinFactory"/>-->
+    <!-- 持久化 -->
+    <projectService serviceImplementation="com.yonyou.openapi.OpenApiService"/>
+    <projectService serviceImplementation="com.yonyou.lang.setting.LangService"/>
+    <projectService serviceImplementation="com.yonyou.lang.read.vo.ResourcesCacheService"/>
+    <projectService serviceImplementation="com.yonyou.model.service.NCHomeConfigService"/>
+    <!-- ncc项目类型 -->
+    <moduleType id="NCCModule" classpathProvider="true" implementationClass="com.yonyou.module.NCCModuleType"/>
+    <moduleBuilder builderClass="com.yonyou.module.builder.NCCModuleBuilder"/>
+    <!-- Event Log -->
+    <notificationGroup id="NCCToolNotice" displayType="BALLOON"/>
+    <!-- 项目打开后 -->
+    <postStartupActivity implementation="com.yonyou.listener.NCCToolListener"/>
+    <!-- 项目启动配置类型 -->
+    <configurationType implementation="com.yonyou.run.configuration.NCCConfigurationType"/>
+    <!-- 调用Locator的代码检查 -->
+    <localInspection language="JAVA"
+      displayName="client、public和private的引用类检查"
+      groupPath="Java"
+      groupBundle="messages.InspectionsBundle"
+      groupKey="group.names.probable.bugs"
+      enabledByDefault="true"
+      level="ERROR"
+      implementationClass="com.yonyou.inspection.UseLocatorInspection"/>
+    <!-- 数据源切换，在右下角状态栏 -->
+    <statusBarWidgetFactory id="dbSourceWidget"
+      implementation="com.yonyou.statusbar.factory.DbsourceSetWidgetFactory"
+      order="after encodingWidget"/>
+    <!-- Search everywhere services/objects -->
+    <searchEverywhereContributor
+      implementation="com.yonyou.search.actions.ActionclassSearchEverywhereContributor$Factory"/>
+  </extensions>
+
+  <actions>
+    <!-- 弹窗 -->
+    <action id="NCHomeConfig" icon="/icons/nccicon.svg"
+      class="com.yonyou.model.actions.NCHomeConfigAction" text="Home配置"
+      description="Home配置">
+      <add-to-group group-id="ToolbarRunGroup" anchor="first"/>
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt H"/>
+    </action>
+
+    <!-- 项目右键操作 -->
+    <action id="CreateNCCModule"
+      class="com.yonyou.project.actions.CreateNCCModuleAction"
+      text="创建YonBIP高级版项目" description="新建一个YonBIP高级版项目">
+      <add-to-group group-id="JavaNewProjectOrModuleGroup" anchor="last"/>
+    </action>
+
+    <action id="CreateNCCComponent"
+      class="com.yonyou.project.actions.CreateNCCComponentAction"
+      text="创建YonBIP高级版业务组件" description="新建一个YonBIP高级版业务组件">
+    </action>
+
+    <action id="UpdataClasses"
+      class="com.yonyou.project.actions.UpdataClassesAction"
+      text="更新Home类路径" description="更新Home类路径">
+    </action>
+
+    <action id="CopyYyconfigAndUpmToHome"
+      class="com.yonyou.project.actions.CopyYyconfigAndUpmToHomeAction"
+      text="复制鉴权、upm、rest文件到Home" description="复制鉴权、upm、rest文件到Home">
+    </action>
+
+    <action id="CopyResourcesToHome"
+      class="com.yonyou.project.actions.CopyResourcesToHomeAction"
+      text="复制resources目录下文件到Home" description="复制resources目录下文件到Home">
+    </action>
+
+    <action id="ExportNCCPatch"
+      class="com.yonyou.project.actions.ExportNCCPatchAction"
+      text="导出补丁包" description="导出YonBIP高级版补丁包">
+    </action>
+
+    <action id="ServerDebugStart"
+      class="com.yonyou.run.actions.ServerDebugAction"
+      text="启动YonBIP高级版中间件" description="启动YonBIP高级版中间件">
+    </action>
+
+    <action id="ClientDebugStart"
+      class="com.yonyou.run.actions.ClientDebugAction"
+      text="启动YonBIP高级版重量端" description="启动YonBIP高级版重量端">
+    </action>
+
+    <action id="ExportPrecastScript"
+      class="com.yonyou.project.actions.ExportPrecastScriptAction"
+      text="导出预制脚本" description="导出预制脚本">
+    </action>
+
+    <action id="RenderToNCModule"
+      class="com.yonyou.project.actions.RenderToNCModuleAction"
+      text="转化成YonBIP高级版项目" description="转化成YonBIP高级版项目">
+    </action>
+
+    <action id="ConvertToChart" class="com.yonyou.editor.actions.ConvertToChartAction" text="转换成图表">
+      <add-to-group group-id="EditorPopupMenu2" anchor="first"/>
+    </action>
+
+    <action id="GotoActionclass" class="com.yonyou.search.actions.GotoActionclassAction"
+      text="搜索Action类路径">
+      <add-to-group group-id="GoToMenu" anchor="after" relative-to-action="GoToTargetEx"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt f"/>
+    </action>
+
+    <action id="CommitMessage" class="com.yonyou.vcs.action.CommitMessageAction"
+      text="创建提交信息" icon="/icons/info.svg">
+      <add-to-group group-id="Vcs.Commit.PrimaryCommitActions" anchor="last"/>
+    </action>
+
+    <action id="ToDevDoc"
+      class="com.yonyou.menu.actions.ToNccdevAction"
+      text="开发文档">
+    </action>
+    <action id="ToNccdev"
+      class="com.yonyou.menu.actions.ToNccdevAction"
+      text="技术论坛">
+    </action>
+    <action id="ToOpenAPIDoc"
+      class="com.yonyou.menu.actions.ToNccdevAction"
+      text="OpenAPI文档">
+    </action>
+    <action id="ToDevtools"
+      class="com.yonyou.menu.actions.ToNccdevAction"
+      text="开发社区在线工具">
+    </action>
+    <action id="DevLogin"
+      class="com.yonyou.menu.actions.DevLoginAction"
+      text="开发者登录">
+    </action>
+    <action id="LocalDatadict"
+      class="com.yonyou.menu.actions.LocalDatadictAction"
+      text="本地数据源数据字典">
+    </action>
+
+    <action id="ExtractMultiLangText"
+            class="com.yonyou.lang.action.ExtractMultiLangTextAction"
+            text="抽取代码多语" description="抽取代码多语生成多语文件">
+    </action>
+
+    <action id="ExtractMultiLangSingleTextAction"
+            class="com.yonyou.lang.action.ExtractMultiLangSingleTextAction"
+            text="抽取单个词条多语" description="抽取单个词条多语">
+    </action>
+
+    <action id="AIMcpAction"
+            class="com.yonyou.mcp.action.AIMcpAction"
+            text="启动BIP智能本地MCP服务" description="启动BIP智能本地MCP服务">
+    </action>
+    <action id="AIMcpStopAction"
+            class="com.yonyou.mcp.action.AIMcpStopAction"
+            text="停止BIP智能本地MCP服务" description="停止BIP智能本地MCP服务">
+    </action>
+    <action id="AIMcpUseDOCAction"
+            class="com.yonyou.mcp.action.AIMcpUseDOCAction"
+            text="BIP智能MCP使用说明" description="BIP智能MCP使用说明">
+    </action>
+    <!--添加到弹出框右键-->
+    <group id="ExtractMultiLang-EditorPopupMenu-Group">
+      <add-to-group group-id="EditorPopupMenu" anchor="before" relative-to-action="ShowIntentionsGroup"/>
+      <reference ref="ExtractMultiLangSingleTextAction"></reference>
+      <reference ref="AIMcpAction"></reference>
+      <reference ref="AIMcpStopAction"></reference>
+      <reference ref="AIMcpUseDOCAction"></reference>
+    </group>
+
+    <group id="NCCProjectTools" text="YonBIP高级版项目工具" popup="true" description="YonBIP高级版项目工具">
+
+      <reference id="AIMcpAction"/>
+      <reference id="AIMcpStopAction"/>
+      <reference id="AIMcpUseDOCAction"/>
+      <separator/>
+      <reference id="ExportNCCPatch"/>
+      <separator/>
+      <reference id="CreateNCCModule"/>
+      <reference id="CreateNCCComponent"/>
+      <separator/>
+      <reference id="CopyYyconfigAndUpmToHome"/>
+      <reference id="CopyResourcesToHome"/>
+      <reference id="UpdataClasses"/>
+      <separator/>
+      <reference id="ServerDebugStart"/>
+      <reference id="ClientDebugStart"/>
+      <separator/>
+      <reference id="ExportPrecastScript"/>
+      <reference id="ConvertToChart"/>
+      <separator/>
+      <reference id="RenderToNCModule"/>
+      <separator/>
+      <reference id="ExtractMultiLangText"/>
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+        relative-to-action="AnalyzeMenu"/>
+    </group>
+
+    <group id="Datadict" text="数据字典" popup="true"
+      class="com.yonyou.menu.actions.DatadictGroupAction"/>
+
+    <group id="DatadictIndustry" text="数据字典-行业" popup="true"
+      class="com.yonyou.menu.actions.DatadictIndustryGroupAction"/>
+
+    <group id="DevResourceTools" text="开发资源" popup="true">
+      <reference id="DevLogin"/>
+      <separator/>
+      <reference id="ToDevtools"/>
+      <separator/>
+      <reference id="ToDevDoc"/>
+      <reference id="ToNccdev"/>
+      <reference id="ToOpenAPIDoc"/>
+      <separator/>
+      <reference id="Datadict"/>
+      <reference id="DatadictIndustry"/>
+      <reference id="LocalDatadict"/>
+      <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
+    </group>
+    <!-- 数据源切换 -->
+    <group id="ChangeDbsource" popup="true"
+      class="com.yonyou.statusbar.action.ChangeDbsourceActionGroup"/>
+
+    <group id="ChangeCommitTools" text="YonBIP高级版项目工具" popup="true">
+      <reference id="ExportNCCPatch"/>
+      <add-to-group group-id="ChangesViewPopupMenu" anchor="first"/>
+      <add-to-group group-id="Vcs.Log.ChangesBrowser.Popup" anchor="first"/>
+    </group>
+  </actions>
+
+</idea-plugin>

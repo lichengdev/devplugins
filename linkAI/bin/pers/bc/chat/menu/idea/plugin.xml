@@ -1,0 +1,109 @@
+<idea-plugin>
+   <!-- Strat lbc https://nccdev.yonyou.com/ide/idea/latest/yonyou-dev-studio.zip  -->  
+   <!-- C:\Users\licheng\AppData\Roaming\JetBrains\IntelliJIdea2025.3\plugins -->  
+  <id>pers.dev.studio</id>
+  <name>libencheng开发者AI工具导航</name>
+  <version>2026.0206 </version>
+  <vendor phone="13121055201" email="550583975@qq.com" url="https://gitee.com/lichengdev">客开赋能部</vendor>
+
+  <description>
+    <![CDATA[ **********************************************<br/>
+              欢迎使用 - 开发者工具箱<br/>
+              作 者：QQ/微信 550583975<br/>
+              码 云：<a href="https://gitee.com/lichengdev">https://gitee.com/lichengdev</a><br/>
+              GitHub：<a href="https://github.com/lichengdev">https://github.com/lichengdev</a><br/>
+             **********************************************<br/> ]]>
+  </description>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="222.3345.118"/>
+ 
+  <!-- 扩展 -->
+  <extensions defaultExtensionNs="com.intellij">
+     <!-- 侧边栏
+    <toolWindow id="xiaoyouRobot" icon="/icons/robot.svg" secondary="false" anchor="right"  factoryClass="com.yonyou.robot.RobotToolWinFactory"/> 
+    -->
+ </extensions>
+
+  <actions>
+     
+
+   <!-- Strat lbc -->
+    <action text="👉AI工具导航" icon="/icons/ai.png" id="https://aidh.net" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="智谱清言(AI工具集)" icon="/icons/zzpqy.png" id="https://ai-bot.cn" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    
+    <action text="ChatGPT" icon="/icons/gitee.png" id="https://openai.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="KiMi" icon="/icons/zkimi.png" id="https://www.kimi.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="CSDN" icon="/icons/zzpqy.png" id="https://ai.csdn.net" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    
+    <action text="DeepSeek" icon="/icons/zdeepseek.png" id="https://chat.deepseek.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="千问" icon="/icons/qianwen.png" id="https://www.qianwen.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="豆包" icon="/icons/zdoubao.png" id="https://www.doubao.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="元宝" icon="/icons/zyuanbao.png" id="https://yuanbao.tencent.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="文心" icon="/icons/zbaiduai.png" id="https://chat.baidu.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>
+    
+    <!--   -->
+    <action text="秘塔 AI"  id="https://metaso.cn" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="纳米 AI" icon="/icons/znami.png" id="https://www.n.cn" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="AI万花筒" icon="/icons/zbaiduai.png" id="http://www.aiwht.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+
+    
+    <!--   -->
+    <action  text="Trae AI" id="https://www.trae.ai" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+    <action  text="Cursor‌ AI" id="https://www.cursor.com/cn" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+    <action  text="copilot AI" id="https://copilot.microsoft.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+ 	<action  text="Boardmix AI(绘画)" id="https://boardmix.cn" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+    <action  text="gogemini" id="https://gogemini.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+   
+    
+    <action text="☎我的码云" icon="/icons/gitee.png" id="https://gitee.com/lichengdev/watched" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="🐞我的GitHub" icon="icons/Office2024.png" id="https://github.com/lichengdev" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+    <action text="♬抖音-记录美好生活" icon="/icons/douyin.png" id="https://www.douyin.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>  
+	<action text="📱MvnRepository" icon="icons/maven.png" id="https://central.sonatype.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/>
+  
+    <action text="大盘云图 -大盘走势，尽在掌握!" icon="/icons/aixin.png"  id="https://dapanyuntu.com" class="pers.bc.chat.menu.idea.AiNavbarHandler"/> 
+    <action text="关于我^_^" icon="/icons/aixin.png"  id="HelpAction" class="pers.bc.menu.action.HelpAction"/> 
+    
+    <group id="DevAIResourceTools" text="人工智能-AI(◕‿◕)" popup="true" > 
+
+      <reference id="https://aidh.net"/> 
+      <reference id="https://ai-bot.cn"/> 
+      <separator/> 
+      <reference id="https://www.anthropic.com"/> 
+      <reference id="https://openai.com"/> 
+      <reference id="https://www.kimi.com"/> 
+      <reference id="https://ai.csdn.net"/> 
+      <separator/> 
+      <reference id="https://chat.baidu.com"/> 
+      <reference id="https://yuanbao.tencent.com"/> 
+      <reference id="https://chat.deepseek.com"/> 
+      <reference id="https://www.qianwen.com"/> 
+      <reference id="https://www.doubao.com"/> 
+      <separator/> 
+      <reference id="https://metaso.cn"/> 
+      <reference id="https://www.n.cn"/> 
+      <reference id="http://www.aiwht.com"/>
+      
+      <separator/> 
+      <reference id="https://www.trae.ai"/> 
+      <reference id="https://www.cursor.com/cn"/> 
+      <reference id="https://copilot.microsoft.com"/> 
+      <reference id="https://boardmix.cn"/> 
+      <reference id="https://gogemini.com"/> 
+      <separator/> 
+            
+      <reference id="https://central.sonatype.com"/> 
+      <reference id="https://github.com/lichengdev"/>
+      <reference id="https://gitee.com/lichengdev/watched"/>
+      <reference id="https://www.douyin.com"/>
+      <reference id="https://dapanyuntu.com"/>
+      
+      <separator/> 
+      <reference id="HelpAction"/>
+      
+      <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
+    </group> 
+     
+  </actions>
+
+</idea-plugin>
