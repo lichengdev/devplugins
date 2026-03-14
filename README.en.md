@@ -19,21 +19,25 @@ openexplorer  eclipse定位工具
 
 #### 使用说明
 
+   git config --global user.name "你的姓名"
+   git config --global user.email "你的邮箱@example.com"
+   
    … 或者在命令行创建一个新的仓库
    echo "# devplugins" >> README.md
    git init
    git add README.md
    git commit -m "first commit"
    git branch -M main
-   git remote add origin https://github.com/lichengdev/devplugins.git
+   git remote add origin https://github.com/lichengdev/yonyapp.git
    git push -u origin main
    .........................
    … 或者从命令行推送已有的仓库
-   git remote add origin https://github.com/lichengdev/devplugins.git
+   git remote add origin https://github.com/lichengdev/yonyapp.git
    git branch -M main
    git push -u origin main
 
-   git clone  https://github.com/lichengdev/devplugins.git 从远程库中克隆
+
+   git clone https://github.com/lichengdev/yonyapp.git  从远程库中克隆
    git branch  查看当前所有的分支
    git checkout 分支名  作用是切换分支
    

@@ -19,6 +19,9 @@ openexplorer  eclipse定位工具
 
 #### 使用说明
 
+   git config --global user.name "你的姓名"
+   git config --global user.email "你的邮箱@example.com"
+   
    … 或者在命令行创建一个新的仓库
    echo "# devplugins" >> README.md
    git init
