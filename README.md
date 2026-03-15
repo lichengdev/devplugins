@@ -15,7 +15,8 @@ monitorApp  监控
 openexplorer  eclipse定位工具
 
 #### 安装教程
- 
+ github: https://github.com/lichengdev/devplugins.git
+ gitee: https://gitee.com/lichengdev/devplugins.git
 
 #### 使用说明
 
@@ -45,6 +46,7 @@ openexplorer  eclipse定位工具
    git commit –m “XX”  提交文件 –m 后面的是注释。
    
    git push origin master  Git会把master分支推送到远程库对应的远程分支上  
+   
 #### 参与贡献
 
 1.  Fork 本仓库

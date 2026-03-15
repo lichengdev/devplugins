@@ -16,6 +16,8 @@ openexplorer  eclipse定位工具
 
 #### 安装教程
  
+ github: https://github.com/lichengdev/devplugins.git
+ gitee: https://gitee.com/lichengdev/devplugins.git
 
 #### 使用说明
 
