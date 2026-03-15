@@ -1,12 +1,24 @@
 # 开发工具 开发工具相关插件。包含eclipse，idea相关插件AI导航
 
+
 <div align="center">
-    <img src="00.png" alt="项目Logo" width="200">
+    <img src="icons/00.png" alt="项目Logo" width="16">
+    <img src="icons/01.png" alt="项目Logo" width="16">
+    <img src="icons/02.png" alt="项目Logo" width="16">
+    <img src="icons/03.png" alt="项目Logo" width="16">
+    <img src="icons/04.png" alt="项目Logo" width="16">
+    <img src="icons/05.png" alt="项目Logo" width="16">
+    <img src="icons/06.png" alt="项目Logo" width="16">
+    <img src="icons/07.png" alt="项目Logo" width="16">
+    <img src="icons/08.png" alt="项目Logo" width="16">
+    <img src="icons/09.png" alt="项目Logo" width="16"> 
+    <img src="icons/10.png" alt="项目Logo" width="16"> 
     <br>
     <!-- 徽章示例：构建状态、版本、许可证、下载量等 -->
     <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version 1.0.0">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
 </div>
+
 
 ---
 #### 介绍 
