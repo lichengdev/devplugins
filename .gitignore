@@ -18,6 +18,7 @@
 *.zip
 *.tar.gz
 *.rar
+.idea
 
 **/classes 
 /.sonarlint
@@ -29,6 +30,7 @@
 /logs
 /out
 /bin
+/.idea
 .class
 .log
 /*/logs
